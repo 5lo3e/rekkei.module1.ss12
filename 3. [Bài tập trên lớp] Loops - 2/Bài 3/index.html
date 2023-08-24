@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+
+<body>
+    <script>
+        let soNguyenTo= " ";
+        let soHoanHao= " ";
+        let soChan= " ";
+        let soLe= " ";
+ let a=1
+
+while (a>0) {
+    let a = +prompt("Nhập số cần kiểm tra (Nhập escape để thoát)");
+        if(a<0){
+            console.log("các số nguyên tố là: "+soNguyenTo);
+            console.log("Các số hoàn hảo là: "+soHoanHao);
+            console.log("Số lẻ cần kiểm tra là: " +soLe);
+            console.log("Số chẵn cần kiểm tra là: " +soChan);
+
+            break;
+        }
+
+        // số nguyển tố
+        let count = 0
+        for (let i = 2; i <= Math.sqrt(a); i++) {
+            if (a % i == 0) {
+                count++;
+            }
+        }
+        if (count == 0) {
+           soNguyenTo = soNguyenTo + a + " "
+        }
+    
+
+        // số hoàn hảo
+        let result = 0
+        for (let i = 1; i <= a / 2; i++) {
+            if (a % i == 0) {
+                result += i;
+            }
+        }
+        if (result == a) {
+            soHoanHao = soHoanHao + a + " "
+        }
+       
+
+        // chẵn lẻ
+        if (a % 2 == 0) {
+            soChan = soChan + a + " "
+        }
+        else{
+            soLe = soLe + a + " "
+        }
+      
+
+
+}
+        
+            
+
+   
+
+
+    </script>
+
+</body>
+
+</html>

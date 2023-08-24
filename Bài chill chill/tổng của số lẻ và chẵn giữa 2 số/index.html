@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chill-2</title>
+</head>
+<body>
+    <p>Nhập vào hai số nguyên dương a và b. Tìm tổng của tất cả các số lẻ và chẵn nằm giữa hai số đó.</p>
+    <script>
+        let a=+prompt("Nhập số thứ 1");
+        let b=+prompt("Nhập số thứ 2");
+        let swap=0;;
+        let resultOdd=0;
+        let resultEven=0;
+        if (a<b) {
+            swap =a;
+            a=b;
+            b=swap;
+        }       
+        for(b;b<=a;b++){
+            if (b%2==0){
+                resultEven+=b;
+            }
+            else{
+                resultOdd+=b;
+            }
+        }
+        console.log("tổng các số chẵn "+resultEven);
+        console.log("tổng các số lẻ "+resultOdd);
+
+
+    </script>
+</body>
+</html>
